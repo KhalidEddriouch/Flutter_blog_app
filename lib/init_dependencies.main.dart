@@ -64,7 +64,7 @@ void _initAuth() {
       ),
     )
     // Bloc
-    ..registerLazySingleton(
+    ..registerSingleton(
       () => AuthBloc(
         userSignUp: serviceLocator(),
         userLogin: serviceLocator(),

@@ -25,6 +25,10 @@ class BlogCard extends StatelessWidget {
         ),
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
+          image: DecorationImage(
+            image: NetworkImage(blog.imageUrl),
+            fit: BoxFit.cover,
+          ),
           color: color,
           borderRadius: BorderRadius.circular(10),
         ),
