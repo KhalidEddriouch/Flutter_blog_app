@@ -1,16 +1,16 @@
-import 'package:blog_app/core/error/faillures.dart';
+import 'package:blog_app/core/error/failures.dart';
+import 'package:blog_app/core/common/entities/user.dart';
 import 'package:fpdart/fpdart.dart';
 
 abstract interface class AuthRepository {
-  // ignore: non_constant_identifier_names
-  Future<Either<Faillure, String>> SingUpWithEmailPassword({
-    required String email,
-    required String password,
+  Future<Either<Failure, User>> signUpWithEmailPassword({
     required String name,
-  });
-  // ignore: non_constant_identifier_names
-  Future<Either<Faillure, String>> SignInWithEmailPassword({
     required String email,
     required String password,
   });
+  Future<Either<Failure, User>> loginWithEmailPassword({
+    required String email,
+    required String password,
+  });
+  Future<Either<Failure, User>> currentUser();
 }
